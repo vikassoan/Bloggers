@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    <h1 class="main__title">Edit: Blog <%=index+1%></h1>
+    <form action="/edited" method="post">
+        <input type="hidden" id="index" name="index" value="<%= index %>">
+        <div class="form-group">
+        <label class="form-label" for="title">Title</label>
+        <input class="form-control" type="text" id="title" name="title" value="<%blog.forEach(element => {%>
+            <%=(element.title)%>
+        <%})%>" required></input>
+        </div>
+        <div class="form-group">
+        <label class="form-label" for="blog">Blog</label>
+        <input class="form-control" type="text" id="blog" name="blog" value="<%blog.forEach(element => {%>
+            <%=(element.blog)%>
+        <%})%>"required></input>
+        </div>
+        <div class="form-group">
+        <label class="form-label" for="author">Author</label>
+        <input class="form-control" type="text" id="author" name="author" value = "<%blog.forEach(element => {%>
+            <%=(element.author)%>
+        <%})%>" required></input>
+        </div>
+        <div class="form-group">
+        <label class="form-label" for="date">Date</label>
+        <input class="form-control" type="date" id="date" name="date" required></input>
+        </div>
+        <div class="form-group m-3">
+        <input class="form-control btn btn-primary" type="submit"></input>
+        </div>
+    </form>
+</main>
+
+<%- include("partials/footer.ejs") %>

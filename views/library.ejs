@@ -1,0 +1,40 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+    <h1 class="main__title">Library</h1>
+    <% if(locals.blogs && blogs.length > 0) { %>
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <ol class="d-grid gap-4">
+        <% blogs.forEach((data, index) => { %>
+            <% data.forEach(subData =>{ %>
+
+            <li>
+                <div class="card">
+                <h5 class="card-header"><%= subData.title %></h5>
+                <div class="card-body">
+                <p><%= subData.blog %></p>
+                <p><span class="h5">Author:</span> <%= subData.author %></p>
+                <p><span class="h5">Date:</span> <%= subData.date %></p>
+                <div class="d-grid gap-2 d-md-block">
+                <form class="btn btn-danger" type="button" action="/delete" method="get">
+                    <input class="btn btn-danger" action="/delete" type="submit" value="Delete"></input>
+                    <input type="hidden" name="index" value="<%= index %>"></input>
+                </form>
+                <form class="btn btn-primary" type="button" action="/edit" method="get">
+                    <input type="hidden" name="index" value="<%= index %>"></input>
+                    <input class="btn btn-primary" action="/edit" type="submit" value="Edit"></input>
+                </form>
+                </div>
+                </div>
+            </div>
+            </li>
+            
+        <%}) });%>
+    </ol>
+    </div>
+    <% } else { %>
+        <p>No blogs found</p>
+    <% } %>
+</main>
+
+<%- include("partials/footer.ejs") %>
