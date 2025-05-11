@@ -1,4 +1,4 @@
-#Bloggers
+<h1>Bloggers</h1>
 A modern and responsive blogging web application built to create, read, update, and delete blog posts. This project is aimed at showcasing full-stack web development skills with an emphasis on frontend UI/UX and backend integration.
 
 📁 Directory Overview
