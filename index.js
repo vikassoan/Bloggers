@@ -2,9 +2,11 @@ import express from "express";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
+import dotenv from 'dotenv';
 
 const app = express();
-const port = 3000;
+dotenv.config();
+const port = process.env.PORT;
 var title = "";
 var blog = "";
 var author = "";
