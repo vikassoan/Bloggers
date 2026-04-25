@@ -1,6 +1,9 @@
 <h1>Bloggers</h1>
 A modern and responsive blogging web application built to create, read, update, and delete blog posts. This project is aimed at showcasing full-stack web development skills with an emphasis on frontend UI/UX and backend integration.
 
+## Live Link
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=for-the-badge)](https://bloggers-q6of.onrender.com)
+
 📁 Directory Overview
 This repository's public/ folder contains essential static assets for the frontend, such as:
 
